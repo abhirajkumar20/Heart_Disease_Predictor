@@ -2,17 +2,33 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #000;
+    color: #fff;
 }
 
 header {
     background-color: #333;
     color: #fff;
     padding: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none; /* Hide by default on larger screens */
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
 }
 
 .top-left {
-    float: left;
+    margin-right: auto; /* Push Vel Tech to the right */
 }
 
 .container {
@@ -22,3 +38,13 @@ header {
 }
 
 /* Add more styles as needed */
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Show on smaller screens */
+    }
+
+    .top-left {
+        display: none; /* Hide Vel Tech on smaller screens */
+    }
+}
